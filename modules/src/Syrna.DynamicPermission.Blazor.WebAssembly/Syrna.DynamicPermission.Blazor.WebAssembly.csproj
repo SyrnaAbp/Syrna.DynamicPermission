@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<Import Project="..\..\..\common.props" />
+	<Import Project="..\..\..\configureawait.props" />
+	<Import Project="..\..\..\packing.props" />
+
+	<PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.AspNetCore.Components.WebAssembly.Theming" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Syrna.DynamicPermission.Blazor\Syrna.DynamicPermission.Blazor.csproj" />
+        <ProjectReference Include="..\Syrna.DynamicPermission.HttpApi.Client\Syrna.DynamicPermission.HttpApi.Client.csproj" />
+    </ItemGroup>
+
+</Project>

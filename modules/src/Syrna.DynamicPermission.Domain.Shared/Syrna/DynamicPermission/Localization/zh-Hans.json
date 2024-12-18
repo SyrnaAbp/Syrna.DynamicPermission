@@ -1,0 +1,22 @@
+{
+  "culture": "zh-Hans",
+  "texts": {
+    "DynamicPermission": "动态权限",
+    "Menu:SyrnaDynamicPermission": "动态权限",
+    "Permission:PermissionDefinition": "权限定义",
+    "Permission:Create": "新建",
+    "Permission:Update": "编辑",
+    "Permission:Delete": "删除",
+    "Permission:Manage": "管理",
+    "Menu:PermissionDefinition": "权限定义",
+    "PermissionDefinition": "权限定义",
+    "PermissionDefinitionName": "权限名",
+    "PermissionDefinitionDisplayName": "展示名称",
+    "PermissionDefinitionDescription": "描述",
+    "PermissionDefinitionIsPublic": "是否公开",
+    "CreatePermissionDefinition": "新建",
+    "EditPermissionDefinition": "编辑",
+    "PermissionDefinitionDeletionConfirmationMessage": "确认删除权限定义 {0}?",
+    "SuccessfullyDeleted": "删除成功"
+  }
+}

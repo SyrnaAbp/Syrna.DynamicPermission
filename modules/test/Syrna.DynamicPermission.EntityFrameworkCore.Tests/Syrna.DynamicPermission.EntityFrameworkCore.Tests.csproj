@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>Syrna.DynamicPermission</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" />
+    <ProjectReference Include="..\..\src\Syrna.DynamicPermission.EntityFrameworkCore\Syrna.DynamicPermission.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Syrna.DynamicPermission.TestBase\Syrna.DynamicPermission.TestBase.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" />
+  </ItemGroup>
+
+</Project>

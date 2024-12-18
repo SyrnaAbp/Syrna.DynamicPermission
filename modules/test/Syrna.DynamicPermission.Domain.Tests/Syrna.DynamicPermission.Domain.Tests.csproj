@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>Syrna.DynamicPermission</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <ProjectReference Include="..\Syrna.DynamicPermission.EntityFrameworkCore.Tests\Syrna.DynamicPermission.EntityFrameworkCore.Tests.csproj" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" />
+  </ItemGroup>
+
+</Project>
