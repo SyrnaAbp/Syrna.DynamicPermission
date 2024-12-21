@@ -23,14 +23,14 @@ namespace Syrna.DynamicPermission.MainDemo.Data
         [UnitOfWork]
         public async Task SeedAsync(DataSeedContext context)
         {
-            if (!await _permissionDefinitionRepository.AnyAsync(x => x.Name == PermissionDefinitionDemo1Name))
+            if (!await _permissionDefinitionRepository.AnyAsync(x => x.Id == PermissionDefinitionDemo1Name))
             {
                 await _permissionDefinitionRepository.InsertAsync(
                     new PermissionDefinition(PermissionDefinitionDemo1Name, PermissionDefinitionDemo1Name, "A demo",
                         true), true);
             }
 
-            if (!await _permissionDefinitionRepository.AnyAsync(x => x.Name == PermissionDefinitionDemo2Name))
+            if (!await _permissionDefinitionRepository.AnyAsync(x => x.Id == PermissionDefinitionDemo2Name))
             {
                 await _permissionDefinitionRepository.InsertAsync(
                     new PermissionDefinition(PermissionDefinitionDemo2Name, PermissionDefinitionDemo2Name, "A demo",

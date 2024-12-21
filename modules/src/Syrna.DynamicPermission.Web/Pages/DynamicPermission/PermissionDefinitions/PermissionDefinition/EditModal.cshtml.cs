@@ -11,10 +11,10 @@ namespace Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefiniti
     {
         [HiddenInput]
         [BindProperty(SupportsGet = true)]
-        public PermissionDefinitionKey Id { get; set; }
+        public string Id { get; set; }
 
         [BindProperty]
-        public CreateEditPermissionDefinitionViewModel ViewModel { get; set; }
+        public EditPermissionDefinitionViewModel ViewModel { get; set; }
 
         private readonly IPermissionDefinitionAppService _service;
 
@@ -26,12 +26,12 @@ namespace Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefiniti
         public virtual async Task OnGetAsync()
         {
             var dto = await _service.GetAsync(Id);
-            ViewModel = ObjectMapper.Map<PermissionDefinitionDto, CreateEditPermissionDefinitionViewModel>(dto);
+            ViewModel = ObjectMapper.Map<PermissionDefinitionDto, EditPermissionDefinitionViewModel>(dto);
         }
 
         public virtual async Task<IActionResult> OnPostAsync()
         {
-            var dto = ObjectMapper.Map<CreateEditPermissionDefinitionViewModel, CreateUpdatePermissionDefinitionDto>(ViewModel);
+            var dto = ObjectMapper.Map<EditPermissionDefinitionViewModel, UpdatePermissionDefinitionDto>(ViewModel);
             await _service.UpdateAsync(Id, dto);
             return NoContent();
         }

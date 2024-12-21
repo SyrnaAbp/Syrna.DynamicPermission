@@ -1,13 +1,15 @@
+using Microsoft.AspNetCore.Mvc;
 using System;
 
 using System.ComponentModel.DataAnnotations;
 
 namespace Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefinitions.PermissionDefinition.ViewModels
 {
-    public class CreateEditPermissionDefinitionViewModel
+    public class EditPermissionDefinitionViewModel
     {
-        [Display(Name = "PermissionDefinitionName")]
-        public string Name { get; set; }
+        [Display(Name = "PermissionDefinitionId")]
+        [HiddenInput]
+        public string Id { get; set; }
 
         [Display(Name = "PermissionDefinitionDisplayName")]
         public string DisplayName { get; set; }
@@ -17,5 +19,8 @@ namespace Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefiniti
 
         [Display(Name = "PermissionDefinitionIsPublic")]
         public bool IsPublic { get; set; }
+
+        [HiddenInput()]
+        public string ConcurrencyStamp { get; set; }
     }
 }

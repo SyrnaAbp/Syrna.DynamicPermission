@@ -9,6 +9,10 @@
     <RootNamespace />
   </PropertyGroup>
 
+	<ItemGroup>
+	  <Compile Remove="Syrna\DynamicPermission\PermissionDefinitions\PermissionDefinitionKey.cs" />
+	</ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Ddd.Domain" />
     <PackageReference Include="Volo.Abp.PermissionManagement.Domain" />

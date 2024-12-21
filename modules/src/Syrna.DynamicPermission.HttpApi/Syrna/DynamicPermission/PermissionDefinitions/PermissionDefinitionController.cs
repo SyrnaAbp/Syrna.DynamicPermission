@@ -4,7 +4,6 @@ using Volo.Abp.Application.Dtos;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp;
-using Volo.Abp.Application.Dtos;
 
 namespace Syrna.DynamicPermission.PermissionDefinitions
 {
@@ -21,28 +20,28 @@ namespace Syrna.DynamicPermission.PermissionDefinitions
 
         [HttpPost]
         [Route("")]
-        public virtual Task<PermissionDefinitionDto> CreateAsync(CreateUpdatePermissionDefinitionDto input)
+        public virtual Task<PermissionDefinitionDto> CreateAsync(CreateOrUpdatePermissionDefinitionDto input)
         {
             return _service.CreateAsync(input);
         }
 
         [HttpPut]
         [Route("{Name}")]
-        public virtual Task<PermissionDefinitionDto> UpdateAsync(PermissionDefinitionKey id, CreateUpdatePermissionDefinitionDto input)
+        public virtual Task<PermissionDefinitionDto> UpdateAsync(string id, CreateOrUpdatePermissionDefinitionDto input)
         {
             return _service.UpdateAsync(id, input);
         }
 
         [HttpDelete]
         [Route("{Name}")]
-        public virtual Task DeleteAsync(PermissionDefinitionKey id)
+        public virtual Task DeleteAsync(string id)
         {
             return _service.DeleteAsync(id);
         }
 
         [HttpGet]
         [Route("{Name}")]
-        public virtual Task<PermissionDefinitionDto> GetAsync(PermissionDefinitionKey id)
+        public virtual Task<PermissionDefinitionDto> GetAsync(string id)
         {
             return _service.GetAsync(id);
         }

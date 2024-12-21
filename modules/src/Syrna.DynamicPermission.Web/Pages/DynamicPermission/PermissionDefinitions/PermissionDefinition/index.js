@@ -25,7 +25,7 @@ $(function () {
                                 visible: abp.auth.isGranted('Syrna.DynamicPermission.PermissionDefinition.Update'),
                                 action: function (data) {
                                     editModal.open({
-                                        name: data.record.name
+                                        id: data.record.id
                                     });
                                 }
                             },
@@ -37,8 +37,8 @@ $(function () {
                                 },
                                 action: function (data) {
                                     service.delete({
-                                            name: data.record.name
-                                        })
+                                        id: data.record.id
+                                    })
                                         .then(function () {
                                             abp.notify.info(l('SuccessfullyDeleted'));
                                             dataTable.ajax.reload();
@@ -49,8 +49,8 @@ $(function () {
                 }
             },
             {
-                title: l('PermissionDefinitionName'),
-                data: "name"
+                title: l('PermissionDefinitionId'),
+                data: "id"
             },
             {
                 title: l('PermissionDefinitionDisplayName'),

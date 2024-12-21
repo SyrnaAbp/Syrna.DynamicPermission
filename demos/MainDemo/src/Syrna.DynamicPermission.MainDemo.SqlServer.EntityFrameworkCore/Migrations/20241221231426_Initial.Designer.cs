@@ -13,7 +13,7 @@ using Volo.Abp.EntityFrameworkCore;
 namespace Syrna.DynamicPermission.MainDemo.SqlServer.Migrations
 {
     [DbContext(typeof(MainDemoMigrationsDbContext))]
-    [Migration("20241218080608_Initial")]
+    [Migration("20241221231426_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -29,7 +29,7 @@ namespace Syrna.DynamicPermission.MainDemo.SqlServer.Migrations
 
             modelBuilder.Entity("Syrna.DynamicPermission.PermissionDefinitions.PermissionDefinition", b =>
                 {
-                    b.Property<string>("Name")
+                    b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -48,10 +48,12 @@ namespace Syrna.DynamicPermission.MainDemo.SqlServer.Migrations
                         .HasColumnName("CreatorId");
 
                     b.Property<string>("Description")
+                        .HasMaxLength(2147483647)
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DisplayName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("ExtraProperties")
                         .IsRequired()
@@ -69,7 +71,7 @@ namespace Syrna.DynamicPermission.MainDemo.SqlServer.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("LastModifierId");
 
-                    b.HasKey("Name");
+                    b.HasKey("Id");
 
                     b.ToTable("SyrnaPermissionDefinitions", (string)null);
                 });

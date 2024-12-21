@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Syrna.DynamicPermission.PermissionDefinitions.Dtos;
 
 namespace Syrna.DynamicPermission.Blazor
 {

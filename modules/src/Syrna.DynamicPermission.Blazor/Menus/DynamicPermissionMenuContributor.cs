@@ -22,7 +22,7 @@ namespace Syrna.DynamicPermission.Blazor.Menus
 
             var abpDynamicPermissionMenuItem = context.Menu.GetAdministration().Items.GetOrAdd(
                 i => i.Name == DynamicPermissionMenus.Prefix,
-                () => new ApplicationMenuItem(DynamicPermissionMenus.Prefix, l["Menu:SyrnaDynamicPermission"],
+                () => new ApplicationMenuItem(DynamicPermissionMenus.Prefix, l["Menu:DynamicPermission"],
                     icon: "fa fa-user-shield")
             );
 

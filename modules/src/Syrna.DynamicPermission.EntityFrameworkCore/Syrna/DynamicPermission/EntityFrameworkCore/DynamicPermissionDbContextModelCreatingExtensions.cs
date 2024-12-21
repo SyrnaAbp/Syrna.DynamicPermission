@@ -45,12 +45,7 @@ namespace Syrna.DynamicPermission.EntityFrameworkCore
             builder.Entity<PermissionDefinition>(b =>
             {
                 b.ToTable(options.TablePrefix + "PermissionDefinitions", options.Schema);
-                b.ConfigureByConvention(); 
-                
-                b.HasKey(e => new
-                {
-                    e.Name,
-                });
+                b.ConfigureByConvention();
 
                 /* Configure more properties here */
             });
