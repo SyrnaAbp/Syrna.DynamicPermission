@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Syrna.DynamicPermission.Web.Pages.Abp.DynamicPermission.PermissionDefinitions.PermissionDefinition
+namespace Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefinitions.PermissionDefinition
 {
     public class IndexModel : DynamicPermissionPageModel
     {

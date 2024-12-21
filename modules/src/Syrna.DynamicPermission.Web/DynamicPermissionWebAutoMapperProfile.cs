@@ -1,6 +1,6 @@
 using Syrna.DynamicPermission.PermissionDefinitions.Dtos;
-using Syrna.DynamicPermission.Web.Pages.Abp.DynamicPermission.PermissionDefinitions.PermissionDefinition.ViewModels;
 using AutoMapper;
+using Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefinitions.PermissionDefinition.ViewModels;
 
 namespace Syrna.DynamicPermission.Web
 {

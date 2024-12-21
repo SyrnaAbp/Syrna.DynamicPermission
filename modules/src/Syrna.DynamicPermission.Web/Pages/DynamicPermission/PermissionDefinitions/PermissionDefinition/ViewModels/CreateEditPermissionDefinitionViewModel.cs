@@ -2,7 +2,7 @@ using System;
 
 using System.ComponentModel.DataAnnotations;
 
-namespace Syrna.DynamicPermission.Web.Pages.Abp.DynamicPermission.PermissionDefinitions.PermissionDefinition.ViewModels
+namespace Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefinitions.PermissionDefinition.ViewModels
 {
     public class CreateEditPermissionDefinitionViewModel
     {

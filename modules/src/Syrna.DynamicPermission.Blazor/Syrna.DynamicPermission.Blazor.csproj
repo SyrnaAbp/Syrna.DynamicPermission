@@ -16,8 +16,4 @@
     <ItemGroup>
         <ProjectReference Include="..\Syrna.DynamicPermission.Application.Contracts\Syrna.DynamicPermission.Application.Contracts.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Pages\Abp" />
-    </ItemGroup>
 </Project>

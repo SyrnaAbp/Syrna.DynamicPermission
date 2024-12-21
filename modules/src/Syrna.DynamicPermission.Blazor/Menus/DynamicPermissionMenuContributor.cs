@@ -30,7 +30,7 @@ namespace Syrna.DynamicPermission.Blazor.Menus
             {
                 abpDynamicPermissionMenuItem.AddItem(
                     new ApplicationMenuItem(DynamicPermissionMenus.PermissionDefinition, l["Menu:PermissionDefinition"],
-                        "/Abp/DynamicPermission/PermissionDefinitions/PermissionDefinition")
+                        "/DynamicPermission/PermissionDefinitions/PermissionDefinition")
                 );
             }
         }

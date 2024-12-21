@@ -3,8 +3,8 @@ $(function () {
     var l = abp.localization.getResource('SyrnaDynamicPermission');
 
     var service = syrna.dynamicPermission.permissionDefinitions.permissionDefinition;
-    var createModal = new abp.ModalManager(abp.appPath + 'Abp/DynamicPermission/PermissionDefinitions/PermissionDefinition/CreateModal');
-    var editModal = new abp.ModalManager(abp.appPath + 'Abp/DynamicPermission/PermissionDefinitions/PermissionDefinition/EditModal');
+    var createModal = new abp.ModalManager(abp.appPath + 'DynamicPermission/PermissionDefinitions/PermissionDefinition/CreateModal');
+    var editModal = new abp.ModalManager(abp.appPath + 'DynamicPermission/PermissionDefinitions/PermissionDefinition/EditModal');
 
     var dataTable = $('#PermissionDefinitionTable').DataTable(abp.libs.datatables.normalizeConfiguration({
         processing: true,
