@@ -10,7 +10,7 @@
 		<PackageIcon>.\logo.png</PackageIcon>
 		<PackageProjectUrl>https://github.com/SyrnaAbp/Syrna.DynamicPermission</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/SyrnaAbp/Syrna.DynamicPermission</RepositoryUrl>
-		<PackageTags>An ABP module that allows you to define and grant dynamic permissions in runtime. syrna alpha</PackageTags>
+		<PackageTags>abp dynamic-permissions abp-framework syrna syrnaabp</PackageTags>
 		<Company>Syrna</Company>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
