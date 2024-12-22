@@ -10,6 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Syrna\DynamicPermission\PermissionDefinitions\Dtos\PermissionDefinitionKey.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" />
     <PackageReference Include="Volo.Abp.Authorization" />
     <ProjectReference Include="..\Syrna.DynamicPermission.Domain.Shared\Syrna.DynamicPermission.Domain.Shared.csproj" />

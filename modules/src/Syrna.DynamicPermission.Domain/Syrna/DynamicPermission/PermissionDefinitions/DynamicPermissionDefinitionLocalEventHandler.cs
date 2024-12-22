@@ -39,7 +39,7 @@ namespace Syrna.DynamicPermission.PermissionDefinitions
         {
             await TryCreateGroupAsync();
 
-            var record = await _permissionDefinitionRecordRepository.FindByNameAsync(eventData.Entity.Name);
+            var record = await _permissionDefinitionRecordRepository.FindByNameAsync(eventData.Entity.Id);
 
             if (record != null)
             {
@@ -47,7 +47,7 @@ namespace Syrna.DynamicPermission.PermissionDefinitions
             }
 
             await _permissionDefinitionRecordRepository.InsertAsync(new PermissionDefinitionRecord(
-                _guidGenerator.Create(), DynamicPermissionGroupName, eventData.Entity.Name, null,
+                _guidGenerator.Create(), DynamicPermissionGroupName, eventData.Entity.Id, null,
                 eventData.Entity.DisplayName), true);
 
             await ClearStoreCacheAsync();
@@ -57,7 +57,7 @@ namespace Syrna.DynamicPermission.PermissionDefinitions
         {
             await TryCreateGroupAsync();
 
-            var record = await _permissionDefinitionRecordRepository.FindByNameAsync(eventData.Entity.Name);
+            var record = await _permissionDefinitionRecordRepository.FindByNameAsync(eventData.Entity.Id);
 
             if (record == null || record.GroupName != DynamicPermissionGroupName)
             {
@@ -75,7 +75,7 @@ namespace Syrna.DynamicPermission.PermissionDefinitions
         {
             await TryCreateGroupAsync();
 
-            var record = await _permissionDefinitionRecordRepository.FindByNameAsync(eventData.Entity.Name);
+            var record = await _permissionDefinitionRecordRepository.FindByNameAsync(eventData.Entity.Id);
 
             if (record == null || record.GroupName != DynamicPermissionGroupName)
             {

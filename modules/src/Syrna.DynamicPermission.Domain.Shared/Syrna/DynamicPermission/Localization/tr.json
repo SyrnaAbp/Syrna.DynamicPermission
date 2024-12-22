@@ -1,0 +1,22 @@
+{
+  "culture": "tr",
+  "texts": {
+    "DynamicPermission": "Dinamik izin",
+    "Menu:DynamicPermission": "Dinamik izin",
+    "Permission:PermissionDefinition": "İzin tanımı",
+    "Permission:Create": "Yeni",
+    "Permission:Update": "Güncelle",
+    "Permission:Delete": "Sil",
+    "Permission:Manage": "Yönet",
+    "Menu:PermissionDefinition": "İzin tanımı",
+    "PermissionDefinition": "İzin tanımı",
+    "PermissionDefinitionId": "Tanım",
+    "PermissionDefinitionDisplayName": "Görüntüleme adı",
+    "PermissionDefinitionDescription": "Açıklama",
+    "PermissionDefinitionIsPublic": "Herkese Açık",
+    "NewPermissionDefinition": "Yeni",
+    "EditPermissionDefinition": "Düzenle",
+    "PermissionDefinitionDeletionConfirmationMessage": "{0} izin tanımını silmek istediğinizden emin misiniz?",
+    "SuccessfullyDeleted": "Başarıyla silindi"
+  }
+}

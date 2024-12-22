@@ -8,7 +8,7 @@ using Volo.Abp.Application.Services;
 
 namespace Syrna.DynamicPermission.PermissionDefinitions
 {
-    public class PermissionDefinitionAppService : AbstractKeyCrudAppService<PermissionDefinition, PermissionDefinitionDto, PermissionDefinitionKey, PagedAndSortedResultRequestDto, CreateUpdatePermissionDefinitionDto, CreateUpdatePermissionDefinitionDto>,
+    public class PermissionDefinitionAppService : AbstractKeyCrudAppService<PermissionDefinition, PermissionDefinitionDto, string, PagedAndSortedResultRequestDto, CreateOrUpdatePermissionDefinitionDto, CreateOrUpdatePermissionDefinitionDto>,
         IPermissionDefinitionAppService
     {
         protected override string GetPolicyName { get; set; } = DynamicPermissionPermissions.PermissionDefinition.Default;
@@ -24,20 +24,20 @@ namespace Syrna.DynamicPermission.PermissionDefinitions
             _repository = repository;
         }
         
-        protected override Task DeleteByIdAsync(PermissionDefinitionKey id)
+        protected override Task DeleteByIdAsync(string id)
         {
             // TODO: AbpHelper generated
             return _repository.DeleteAsync(e =>
-                e.Name == id.Name
+                e.Id == id
             );
         }
 
-        protected override async Task<PermissionDefinition> GetEntityByIdAsync(PermissionDefinitionKey id)
+        protected override async Task<PermissionDefinition> GetEntityByIdAsync(string id)
         {
             // TODO: AbpHelper generated
             return await AsyncExecuter.FirstOrDefaultAsync(
                 (await _repository.GetQueryableAsync()).Where(e =>
-                    e.Name == id.Name
+                    e.Id == id
                 )
             ); 
         }
@@ -45,7 +45,7 @@ namespace Syrna.DynamicPermission.PermissionDefinitions
         protected override IQueryable<PermissionDefinition> ApplyDefaultSorting(IQueryable<PermissionDefinition> query)
         {
             // TODO: AbpHelper generated
-            return query.OrderBy(e => e.Name);
+            return query.OrderBy(e => e.Id);
         }
     }
 }

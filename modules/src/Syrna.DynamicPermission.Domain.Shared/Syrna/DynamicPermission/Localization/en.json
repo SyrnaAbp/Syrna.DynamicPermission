@@ -2,7 +2,7 @@
   "culture": "en",
   "texts": {
     "DynamicPermission": "Dynamic permission",
-    "Menu:SyrnaDynamicPermission": "Dynamic permission",
+    "Menu:DynamicPermission": "Dynamic permission",
     "Permission:PermissionDefinition": "Permission definition",
     "Permission:Create": "Create",
     "Permission:Update": "Update",
@@ -10,11 +10,11 @@
     "Permission:Manage": "Manage",
     "Menu:PermissionDefinition": "Permission definition",
     "PermissionDefinition": "Permission definition",
-    "PermissionDefinitionName": "Name",
+    "PermissionDefinitionId": "Name",
     "PermissionDefinitionDisplayName": "DisplayName",
     "PermissionDefinitionDescription": "Description",
     "PermissionDefinitionIsPublic": "Public",
-    "CreatePermissionDefinition": "New",
+    "NewPermissionDefinition": "New",
     "EditPermissionDefinition": "Edit",
     "PermissionDefinitionDeletionConfirmationMessage": "Are you sure to delete the permission definition {0}?",
     "SuccessfullyDeleted": "Successfully deleted"

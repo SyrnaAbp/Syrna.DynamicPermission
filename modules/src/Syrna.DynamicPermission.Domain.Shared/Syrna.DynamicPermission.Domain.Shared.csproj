@@ -24,4 +24,8 @@
     <Content Remove="Syrna\DynamicPermission\Localization\*.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Syrna\DynamicPermission\PermissionDefinitionKey.cs" />
+  </ItemGroup>
+
 </Project>

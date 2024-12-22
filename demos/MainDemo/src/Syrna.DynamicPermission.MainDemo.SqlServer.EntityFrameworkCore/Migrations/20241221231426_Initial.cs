@@ -458,9 +458,9 @@ namespace Syrna.DynamicPermission.MainDemo.SqlServer.Migrations
                 name: "SyrnaPermissionDefinitions",
                 columns: table => new
                 {
-                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    DisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    DisplayName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: true),
                     IsPublic = table.Column<bool>(type: "bit", nullable: false),
                     ExtraProperties = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
@@ -471,7 +471,7 @@ namespace Syrna.DynamicPermission.MainDemo.SqlServer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SyrnaPermissionDefinitions", x => x.Name);
+                    table.PrimaryKey("PK_SyrnaPermissionDefinitions", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(

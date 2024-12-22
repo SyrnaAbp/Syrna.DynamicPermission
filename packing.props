@@ -6,7 +6,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Syrna Team</Authors>
 		<Description>An abp application module that allows users to send private messages to each other.</Description>
-		<PackageReadmeFile>.\README.md</PackageReadmeFile>
+		<PackageReadmeFile>.\PACKS_README.md</PackageReadmeFile>
 		<PackageIcon>.\logo.png</PackageIcon>
 		<PackageProjectUrl>https://github.com/SyrnaAbp/Syrna.AuditLogging</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/SyrnaAbp/Syrna.AuditLogging</RepositoryUrl>
@@ -16,7 +16,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="..\..\..\README.md">
+		<None Include="..\..\..\PACKS_README.md">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>

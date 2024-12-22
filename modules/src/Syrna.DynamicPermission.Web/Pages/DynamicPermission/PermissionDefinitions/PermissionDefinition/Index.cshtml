@@ -3,7 +3,7 @@
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Volo.Abp.AspNetCore.Mvc.UI.Layout
-@using Syrna.DynamicPermission.Web.Pages.Abp.DynamicPermission.PermissionDefinitions.PermissionDefinition
+@using Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefinitions.PermissionDefinition
 @using Syrna.DynamicPermission.Localization
 @using Syrna.DynamicPermission.Web.Menus
 @model IndexModel
@@ -18,11 +18,11 @@
 
 @section scripts
 {
-    <abp-script src="/Pages/Abp/DynamicPermission/PermissionDefinitions/PermissionDefinition/index.js" />
+    <abp-script src="/Pages/DynamicPermission/PermissionDefinitions/PermissionDefinition/index.js" />
 }
 @section styles
 {
-    <abp-style src="/Pages/Abp/DynamicPermission/PermissionDefinitions/PermissionDefinition/index.css"/>
+    <abp-style src="/Pages/DynamicPermission/PermissionDefinitions/PermissionDefinition/index.css"/>
 }
 
 <abp-card>
@@ -35,7 +35,7 @@
 			    @if (await Authorization.IsGrantedAsync(DynamicPermissionPermissions.PermissionDefinition.Create))
                 {
                 <abp-button id="NewPermissionDefinitionButton"
-                            text="@L["CreatePermissionDefinition"].Value"
+                            text="@L["NewPermissionDefinition"].Value"
                             icon="plus"
                             button-type="Primary" />
                 }

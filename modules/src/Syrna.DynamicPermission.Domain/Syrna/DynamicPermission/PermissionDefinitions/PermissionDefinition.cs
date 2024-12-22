@@ -1,38 +1,34 @@
 using JetBrains.Annotations;
+using System;
+using System.ComponentModel.DataAnnotations;
 using Volo.Abp.Domain.Entities.Auditing;
 
 namespace Syrna.DynamicPermission.PermissionDefinitions
 {
-    public class PermissionDefinition : AuditedAggregateRoot
+    public class PermissionDefinition : AuditedAggregateRoot<string>
     {
         [NotNull]
-        public virtual string Name { get; protected set; }
-
-        [NotNull]
+        [MaxLength(255)]
         public virtual string DisplayName { get; protected set; }
-        
-        [CanBeNull]
-        public virtual string Description { get; protected set; }
-        
-        public virtual bool IsPublic { get; protected set; }
 
-        public override object[] GetKeys()
-        {
-            return new object[] { Name };
-        }
+        [CanBeNull]
+        [MaxLength(int.MaxValue)]
+        public virtual string Description { get; protected set; }
+
+        public virtual bool IsPublic { get; protected set; }
 
         protected PermissionDefinition()
         {
         }
 
         public PermissionDefinition(
-            string name,
+            string id,
             string displayName,
             string description,
             bool isPublic
         )
         {
-            Name = name;
+            Id = id;
             DisplayName = displayName;
             Description = description;
             IsPublic = isPublic;

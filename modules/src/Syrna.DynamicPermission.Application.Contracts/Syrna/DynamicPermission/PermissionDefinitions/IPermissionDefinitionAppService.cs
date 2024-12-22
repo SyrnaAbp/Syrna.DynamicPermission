@@ -8,10 +8,10 @@ namespace Syrna.DynamicPermission.PermissionDefinitions
     public interface IPermissionDefinitionAppService :
         ICrudAppService< 
             PermissionDefinitionDto, 
-            PermissionDefinitionKey, 
+            string, 
             PagedAndSortedResultRequestDto,
-            CreateUpdatePermissionDefinitionDto,
-            CreateUpdatePermissionDefinitionDto>
+            CreateOrUpdatePermissionDefinitionDto,
+            CreateOrUpdatePermissionDefinitionDto>
     {
 
     }

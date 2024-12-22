@@ -1,12 +1,12 @@
 # Syrna.DynamicPermission
-Private Messaging module for ABP framework.
+Dynamic permission module for ABP framework.
 
 [![ABP version](https://img.shields.io/badge/dynamic/xml?style=flat-square&color=yellow&label=abp&query=%2F%2FProject%2FPropertyGroup%2FVoloAbpPackageVersion&url=https%3A%2F%2Fraw.githubusercontent.com%2FSyrnaAbp%2FSyrna.DynamicPermission%2Fmaster%2FDirectory.Packages.props)](https://abp.io)
 ![build and test](https://img.shields.io/github/actions/workflow/status/SyrnaAbp/Syrna.DynamicPermission/build-all.yml?branch=dev&style=flat-square)
 [![NuGet Download](https://img.shields.io/nuget/dt/Syrna.DynamicPermission.Application.svg?style=flat-square)](https://www.nuget.org/packages/Syrna.DynamicPermission.Application)
 [![NuGet (with prereleases)](https://img.shields.io/nuget/vpre/Syrna.DynamicPermission.Application.svg?style=flat-square)](https://www.nuget.org/packages/Syrna.DynamicPermission.Application) 
 
-An abp application module that allows users to send private messages to each other.
+An ABP module that allows you to define and grant dynamic permissions in runtime.
 
 ## Installation
 
@@ -32,6 +32,11 @@ An abp application module that allows users to send private messages to each oth
 
 ## Usage
 
+![Dynamic Permission Definitions](docs/images/DynamicPermissionDefinitions.png)
+
+![Dynamic Permission Definitions Editing](docs/images/DynamicPermissionDefinitions_Editing.png)
+
+![Edit Role Permissions](docs/images/EditRolePermissions.png)
 
 ## Reference
 
@@ -42,5 +47,8 @@ An abp application module that allows users to send private messages to each oth
 1. Demo project created for OpenIddict
 2. Demo project extended modules added
 3. Blazor modules added
+4. Db schema refatored
+5. Blazor modules implemented
+6. AspNetCore Web refactored
 
 

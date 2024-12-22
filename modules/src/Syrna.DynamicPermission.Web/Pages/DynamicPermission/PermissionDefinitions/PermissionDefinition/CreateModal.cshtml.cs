@@ -2,14 +2,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Syrna.DynamicPermission.PermissionDefinitions;
 using Syrna.DynamicPermission.PermissionDefinitions.Dtos;
-using Syrna.DynamicPermission.Web.Pages.Abp.DynamicPermission.PermissionDefinitions.PermissionDefinition.ViewModels;
+using Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefinitions.PermissionDefinition.ViewModels;
 
-namespace Syrna.DynamicPermission.Web.Pages.Abp.DynamicPermission.PermissionDefinitions.PermissionDefinition
+namespace Syrna.DynamicPermission.Web.Pages.DynamicPermission.PermissionDefinitions.PermissionDefinition
 {
     public class CreateModalModel : DynamicPermissionPageModel
     {
         [BindProperty]
-        public CreateEditPermissionDefinitionViewModel ViewModel { get; set; }
+        public CreatePermissionDefinitionViewModel ViewModel { get; set; }
 
         private readonly IPermissionDefinitionAppService _service;
 
@@ -20,7 +20,7 @@ namespace Syrna.DynamicPermission.Web.Pages.Abp.DynamicPermission.PermissionDefi
 
         public virtual async Task<IActionResult> OnPostAsync()
         {
-            var dto = ObjectMapper.Map<CreateEditPermissionDefinitionViewModel, CreateUpdatePermissionDefinitionDto>(ViewModel);
+            var dto = ObjectMapper.Map<CreatePermissionDefinitionViewModel, CreatePermissionDefinitionDto>(ViewModel);
             await _service.CreateAsync(dto);
             return NoContent();
         }
