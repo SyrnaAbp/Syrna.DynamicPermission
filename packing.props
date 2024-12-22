@@ -5,12 +5,12 @@
 		<AbpProjectType>module</AbpProjectType>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Syrna Team</Authors>
-		<Description>An abp application module that allows users to send private messages to each other.</Description>
+		<Description>An ABP module that allows you to define and grant dynamic permissions in runtime.</Description>
 		<PackageReadmeFile>.\PACKS_README.md</PackageReadmeFile>
 		<PackageIcon>.\logo.png</PackageIcon>
-		<PackageProjectUrl>https://github.com/SyrnaAbp/Syrna.AuditLogging</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/SyrnaAbp/Syrna.AuditLogging</RepositoryUrl>
-		<PackageTags>An abp application module that allows users to send private messages to each other syrna alpha</PackageTags>
+		<PackageProjectUrl>https://github.com/SyrnaAbp/Syrna.DynamicPermission</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/SyrnaAbp/Syrna.DynamicPermission</RepositoryUrl>
+		<PackageTags>An ABP module that allows you to define and grant dynamic permissions in runtime. syrna alpha</PackageTags>
 		<Company>Syrna</Company>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
